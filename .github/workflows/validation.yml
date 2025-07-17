@@ -1,0 +1,30 @@
+name: NFTicket Validation Tracker
+
+on:
+  schedule:
+    - cron: '0 9 * * 1' # Every Monday at 9 AM
+  workflow_dispatch:
+
+jobs:
+  weekly-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Update validation metrics
+        run: |
+          echo "## Weekly Validation Report - $(date)" >> weekly-report.md
+          echo "- Demos completed this week: TBD" >> weekly-report.md
+          echo "- Average excitement score: TBD" >> weekly-report.md
+          echo "- Events scheduled: TBD" >> weekly-report.md
+          echo "- New Discord members: TBD" >> weekly-report.md
+          echo "" >> weekly-report.md
+      
+      - name: Commit report
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add weekly-report.md
+          git commit -m "📊 Weekly validation report - $(date)" || exit 0
+          git push
