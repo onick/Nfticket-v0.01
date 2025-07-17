@@ -24,10 +24,11 @@ Crear la plataforma líder de tickets digitales que combina la seguridad de bloc
 
 ### Fase 1: Validación Sin Código (Semanas 1-4)
 - ✅ Landing page mobile-first con A/B testing
-- ✅ Airtable + Zapier para automatización
+- ✅ Supabase + Edge Functions para automatización
 - ✅ Discord privado con organizadores beta  
 - ✅ Demos grabadas con feedback real
 - ✅ User journey manual completo
+- ✅ Real-time analytics dashboard
 
 ### Fase 2: MVP Técnico (Semanas 5-12)
 - 🔄 Next.js + Supabase + Stripe
@@ -143,6 +144,8 @@ Cada feature se evalúa en 5 criterios (1-10):
 - [🏗️ Arquitectura Técnica](docs/02-technical-architecture.md)  
 - [✅ Playbook de Validación](docs/03-validation-playbook.md)
 - [📱 Diseño Mobile-First](docs/04-mobile-first-design.md)
+- [🗄️ Setup de Supabase](validation/supabase-setup.md)
+- [🎬 Scripts de Demo](validation/demo-scripts.md)
 - [🚀 Go-to-Market](docs/05-go-to-market.md)
 
 ## 🤝 Contribuir
